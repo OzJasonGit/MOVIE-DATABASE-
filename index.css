@@ -202,7 +202,7 @@ body {
     grid-area: IMAGE;
     position: relative;
     width: 100%;
-    height: auto;
+    height: 600px ;
 }
 
 
