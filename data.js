@@ -60,7 +60,7 @@ let movieData = {"The Darjeeling Limited": { plot: "A year after their father's 
 
 
 //Extracts data from js object    
-const movieTitle = `${movieData[0]}`;  
+const movieTitle = `${Object.keys(movieData)[0]}`;  
 const moviePlot = `${movieData["The Darjeeling Limited"].plot}`;
 const movieCast = `${movieData["The Darjeeling Limited"].cast}`;                 
 const movieRating = `${movieData["The Darjeeling Limited"].rating}`;
