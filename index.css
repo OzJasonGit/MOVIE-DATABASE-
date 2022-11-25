@@ -168,6 +168,7 @@ body {
     display: grid;
     width: 100%;
     height: auto;
+    padding-bottom: 100px; 
     grid-row-gap: 60px;
     grid-column-gap: 60px;
     grid-template-rows: 1fr 5fr;
@@ -182,17 +183,19 @@ body {
 
 
 
-#CARD {
+.CARD {
     grid-area: IMAGE;
     display: grid;
     width: 100%;
     height: 100%;
+    max-height: 0;
     grid-row-gap: 60px;
-    grid-template-rows: auto auto;
+    grid-template-rows: 1fr 4fr 3fr;
     grid-template-columns: 1fr;
     grid-template-areas:
                     "TITLE"
                     "IMAGE"
+                    "ICON"
 }
 
 
@@ -202,7 +205,7 @@ body {
     grid-area: IMAGE;
     position: relative;
     width: 100%;
-    height: 600px ;
+    height: 560px ;
 }
 
 
@@ -257,6 +260,91 @@ body {
     transform: translateX(150px) translateY(150px);
     
 }
+
+
+
+#TEXT {
+    grid-area: TEXT;
+    max-height: 0;
+
+}
+
+
+#DATA {
+    grid-area: IMAGE;
+    display: grid;
+    width: 100%;
+    height: auto; 
+    max-height:min-content; 
+    grid-row-gap: 20px;
+    grid-template-rows: auto auto auto auto auto;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "PLOT"
+        "RATING"
+        "YEAR"
+        "CAST"
+        "RUNTIME"
+}
+
+.data-type{
+    width: 100%;
+    height: auto;
+}
+
+
+#PLOT-HOLDER {
+    display: grid;
+    width: 100%;
+    height: auto;
+    grid-row-gap: 20px;
+    grid-template-rows: auto auto;
+
+
+}
+
+
+#RATING-HOLDER {
+    display: grid;
+    width: 100%;
+    height: auto;
+    grid-column-gap: 60px;
+    grid-template-columns: 1fr 1fr;
+}
+
+
+#YEAR-HOLDER {
+    display: grid;
+    width: 100%;
+    height: auto;
+    grid-row-gap: 20px;
+    grid-template-rows: auto auto;
+   
+
+}
+
+
+#CAST-HOLDER{
+    display: grid;
+    width: 100%;
+    height: auto;
+    grid-row-gap: 20px;
+    grid-template-rows: auto auto;
+
+}
+
+
+
+#RUNTIME-HOLDER {
+    display: grid;
+    width: 100%;
+    height: auto;
+    grid-row-gap: 20px;
+    grid-template-rows: auto auto;
+    
+}
+
+
 /****************************************************MAIN-APP-AREA*********************************************/
 
 
@@ -415,8 +503,10 @@ h2 {
     font-family: sofia-pro, sans-serif;
     font-weight: 700;
     font-style: normal;
-    font-size: 2.5rem;
+    font-size: 2rem;
     color: #efefef;
+    padding-top: 0px;
+    padding-bottom: 0px;
 }
 
 
@@ -424,7 +514,7 @@ h2 {
     font-family: sofia-pro, sans-serif;
     font-weight: 700;
     font-style: normal;
-    font-size: 2.5rem;
+    font-size: 2rem;
     color: #2e2e2e;
 }
 
@@ -434,7 +524,20 @@ p {
     font-weight: 400;
     font-style: normal;
     font-size: 1rem;
-    color: #2e2e2e;
+    color: #efefef;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+
+
+span {
+    font-family: sofia-pro, sans-serif;
+    display: inline-block;
+    font-weight: 700;
+    font-size: 50px;
+    font-size: 4rem;
+    color: #efefef;
 }
 /******************************FONTS************************************************************************/
 
