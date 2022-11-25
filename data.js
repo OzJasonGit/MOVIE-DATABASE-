@@ -50,7 +50,7 @@ let movieData = {
     cast: ["Jason Schwartzman", "Owen Wilson", "Adrien Brody"],
     runtime: 151,
     rating: 7.2,
-    imgUrl: '',
+    imgUrl: (URL="../assets/images/fantastic-mr-fox.JPG"),
     year: 2007,
   },
 
