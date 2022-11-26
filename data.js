@@ -59,42 +59,69 @@ let movieData = {"The Darjeeling Limited": { plot: "A year after their father's 
 
 
 
-//Extracts data from js object    
+//Extracts data from js object 
+
+
+
+
+
+
 const movieTitle = `${Object.keys(movieData)[0]}`;  
-const moviePlot = `${movieData["The Darjeeling Limited"].plot}`;
-const movieCast = `${movieData["The Darjeeling Limited"].cast}`;                 
-const movieRating = `${movieData["The Darjeeling Limited"].rating}`;
-const movieYear = `${movieData["The Darjeeling Limited"].year}`;
-const movieRuntime = `${movieData["The Darjeeling Limited"].runtime}`;
+const moviePlot = `${Object.values(movieData)[0].plot}`;
+const movieCast = `${Object.values(movieData)[0].cast}`;                 
+const movieRating = `${Object.values(movieData)[0].rating}`;
+const movieYear = `${Object.values(movieData)[0].year}`;
+const movieRuntime = `${Object.values(movieData)[0].runtime}`;
 
 
-console.log(moviePlot);
-console.log(movieCast);                  
-console.log(movieRating);
-console.log(movieYear);
-console.log(movieRuntime);
+
+
+
+console.log(Object.values(movieData))
+
 
 
 
 
 //Defines movie in DOM
 function moviePick(){
-    let movie = [moviePlot, movieCast, movieRating, movieYear, movieRuntime]
 
-    console.log(movie)
     document.getElementById("FILM-TITLE").innerText = movieTitle;
     document.getElementById("PLOT-DATA").innerText = moviePlot;
     document.getElementById("RATING-DATA").innerText = movieRating;
     document.getElementById("YEAR-DATA").innerText = movieYear;
     document.getElementById("CAST-DATA").innerText = movieCast;
     document.getElementById("RUNTIME-DATA").innerText = movieRuntime;
+    
    }
    moviePick();
 
 
 
 
+const tdlB = document.getElementById('TDL')
+const trtB = document.getElementById('TRT')
+const fmfB = document.getElementById('FMF')
+const tgbhB = document.getElementById('TGBH')
 
+
+
+
+
+
+
+
+
+tdlB === movieData[0]
+trtB === movieData[1]
+fmfB === movieData[2]
+tgbhB === movieData[3]
+
+
+
+
+
+0
 
 
 

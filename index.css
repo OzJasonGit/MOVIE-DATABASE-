@@ -222,18 +222,19 @@ body {
     grid-area: IMAGE;
     display: grid;
     width: 250px;
-    height: 350px; 
-    
-    background-repeat: no-repeat;
-    
+    height: 350px;     
+    background-repeat: no-repeat;   
     box-shadow: #2e2e2e;
     background-size: cover;
     background-position: center;
     border-radius: 5px;
     border-style: solid;
     border-width: 2.5px;
-    border-color: #FFFFFF;
+    border-color: #efefef;
+    transition: 1s;
 }
+
+
 
 
 
@@ -242,11 +243,18 @@ body {
     transform: translateZ(150px);
 }
 
+#TRT:hover {
+    transform: scale(1.1);
+}
+
 
 #FMF {
     background-image: url(assets/images/fantastic-mr-fox.JPG); 
-    transform: translateX(50px) translateY(50px) translateZ(100px); 
-      
+    transform: translateX(50px) translateY(50px) translateZ(100px);      
+}
+
+#FMF:hover {
+    transform: scale(1.1) translateZ(1000px);
 }
 
 #TDL {
@@ -254,11 +262,17 @@ body {
     transform: translateX(100px) translateY(100px) translateZ(50px);
 }
 
+#TDL:hover {
+    transform: scale(1.1);
+}
 
-#GBH {
+#TGBH {
     background-image: url(assets/images/grand-budapest-hotel.JPG);
-    transform: translateX(150px) translateY(150px);
-    
+    transform: translateX(150px) translateY(150px);   
+}
+
+#TGBH:hover {
+    transform: scale(1.1);
 }
 
 
