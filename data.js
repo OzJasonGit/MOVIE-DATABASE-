@@ -59,52 +59,55 @@ let movieData = {"The Darjeeling Limited": { plot: "A year after their father's 
 
 
 
-//Extracts data from js object 
 
 
 
+//Create array to store the movie objects. 
+let moviesArr = [];
+
+//push movieData objects into moviesArr.
+moviesArr.push(movieData["The Darjeeling Limited"])
+moviesArr.push(movieData["The Royal Tenenbaums"])
+moviesArr.push(movieData["Fantastic Mr. Fox"])
+moviesArr.push(movieData["The Grand Budapest Hotel"])
 
 
-
-const movieTitle = `${Object.keys(movieData)[0]}`;  
-const moviePlot = `${Object.values(movieData)[0].plot}`;
-const movieCast = `${Object.values(movieData)[0].cast}`;                 
-const movieRating = `${Object.values(movieData)[0].rating}`;
-const movieYear = `${Object.values(movieData)[0].year}`;
-const movieRuntime = `${Object.values(movieData)[0].runtime}`;
-
-let theDarjeeling0 = []
+console.log(moviesArr) //Check to see if objects are pushed into moviesArr.
 
 
-
-console.log(Object.values(movieData))
-
-
-
+//Extract values from moviesArr 
+let movieProps = Object.values(moviesArr)
+console.log(movieProps); //Check if values were extracted. 
 
 
+//loop through our array of objects. 
+for (let i=0; i<movieProps.length; i+=1){
+    console.log(movieProps[i])
 
+    //Store the object information inside a parameter.
+    let movieTitle = `${Object.keys(movieProps)[i]}`;  
+    let moviePlot = `${Object.values(movieProps)[i].plot}`;
+    let movieCast = `${Object.values(movieProps)[i].cast}`;                 
+    let movieRating = `${Object.values(movieProps)[i].rating}`;
+    let movieYear = `${Object.values(movieProps)[i].year}`;
+    let movieRuntime = `${Object.values(movieProps)[i].runtime}`;
 
-//Defines movie in DOM
-function moviePick(){
+    //Add movie switch button. 
+    let changeMovie = document.getElementById("BUTTON")
 
+    //Create text elements rendered in the DOM
     document.getElementById("FILM-TITLE").innerText = movieTitle;
     document.getElementById("PLOT-DATA").innerText = moviePlot;
     document.getElementById("RATING-DATA").innerText = movieRating;
     document.getElementById("YEAR-DATA").innerText = movieYear;
     document.getElementById("CAST-DATA").innerText = movieCast;
     document.getElementById("RUNTIME-DATA").innerText = movieRuntime;
-    
-   }
-   moviePick();
+
+    function updateMovie('click')
 
 
 
-
-const tdlB = document.getElementById('TDL')
-const trtB = document.getElementById('TRT')
-const fmfB = document.getElementById('FMF')
-const tgbhB = document.getElementById('TGBH')
+}
 
 
 
@@ -113,19 +116,30 @@ const tgbhB = document.getElementById('TGBH')
 
 
 
-let theDarjeeling = movieData[0]
-let theRoyal = movieData[1]
-let fantasticMr = movieData[2]
-let theGrand = movieData[3]
-
-
-let movies = [theDarjeeling, theRoyal, fantasticMr, theGrand]
 
 
 
 
 
-document.getElementById("BUTTON") = changeMovie;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
