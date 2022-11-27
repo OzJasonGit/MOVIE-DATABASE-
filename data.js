@@ -84,6 +84,7 @@ console.log(movieProps); //Check if values were extracted.
 for (let i=0; i<movieProps.length; i+=1){
     console.log(movieProps[i])
 
+
     //Store the object information inside a parameter.
     let movieTitle = `${Object.keys(movieProps)[i]}`;  
     let moviePlot = `${Object.values(movieProps)[i].plot}`;
@@ -102,10 +103,12 @@ for (let i=0; i<movieProps.length; i+=1){
     document.getElementById("YEAR-DATA").innerText = movieYear;
     document.getElementById("CAST-DATA").innerText = movieCast;
     document.getElementById("RUNTIME-DATA").innerText = movieRuntime;
-
-    function updateMovie('click')
-
-
+    
+    //Create function for looping through data onclick 
+    changeMovie.addEventListener('click', (e) => {
+      let clickEvent = new MouseEvent ('click', 'loopData');
+    }
+)
 
 }
 
