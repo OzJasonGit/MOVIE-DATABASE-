@@ -16,6 +16,8 @@
 
 
 
+
+
 let movieData = {"The Darjeeling Limited": { plot: "A year after their father's funeral, three brothers travel across India by train in an attempt to bond with each other.",
                                              cast: [" Jason Schwartzman ", " Owen Wilson ", " Adrien Brody "],
                                              runtime: 151,
@@ -58,34 +60,35 @@ let movieData = {"The Darjeeling Limited": { plot: "A year after their father's 
 
 
 
-
-//Extracts data from js object 
-
-
+let movieProps = Object.keys(movieData)
+console.log(movieProps);
 
 
 
 
-const movieTitle = `${Object.keys(movieData)[0]}`;  
-const moviePlot = `${Object.values(movieData)[0].plot}`;
-const movieCast = `${Object.values(movieData)[0].cast}`;                 
-const movieRating = `${Object.values(movieData)[0].rating}`;
-const movieYear = `${Object.values(movieData)[0].year}`;
-const movieRuntime = `${Object.values(movieData)[0].runtime}`;
-
-let theDarjeeling0 = []
+for (let i=0; i<movieProps.length; i+=1){
+    console.log(movieProps[i])
+        document.getElementById("BUTTON").onclick
+    
+    }
 
 
-
-console.log(Object.values(movieData))
+}
 
 
 
+let movieTitle = `${Object.keys(movieProps)[i]}`;  
+let moviePlot = `${Object.values(movieProps)[i].plot}`;
+let movieCast = `${Object.values(movieProps)[i].cast}`;                 
+let movieRating = `${Object.values(movieProps)[i].rating}`;
+let movieYear = `${Object.values(movieProps)[i].year}`;
+let movieRuntime = `${Object.values(movieProps)[i].runtime}`;
 
 
 
 
-//Defines movie in DOM
+
+
 function moviePick(){
 
     document.getElementById("FILM-TITLE").innerText = movieTitle;
@@ -100,39 +103,14 @@ function moviePick(){
 
 
 
-
-const tdlB = document.getElementById('TDL')
-const trtB = document.getElementById('TRT')
-const fmfB = document.getElementById('FMF')
-const tgbhB = document.getElementById('TGBH')
-
-
-
-
-
-
-
-
-let theDarjeeling = movieData[0]
-let theRoyal = movieData[1]
-let fantasticMr = movieData[2]
-let theGrand = movieData[3]
-
-
-let movies = [theDarjeeling, theRoyal, fantasticMr, theGrand]
-
-
-
-
-
-document.getElementById("BUTTON") = changeMovie;
-
-
-
-
-
-
-
-
-
-
+var click;
+for (let t = 1; t < 8; t++){
+    td = document.getElementById('td'+t);
+    if (typeof window.addEventListener === 'function'){
+        (function (_td) {
+            td.addEventListener('click', function(){
+                console.log(_td);
+            });
+        })(td);
+    }
+}
